@@ -1,8 +1,8 @@
 'use strict';
 const mc = require('minecraft-protocol');
 
-const HOST = 'Enter Server IP Here';
-const PORT = Enter Port Here;
+const HOST = 'TWINKUSSMP.aternos.me';
+const PORT = process.env.PORT || 19348;
 const USERNAME = 'AFKBot_ByRanger';
 const VERSION = '1.8.9';    //Do Not Change The Version, Install Via Backward Ff You'r Aternos Server Version Is Higher Than 1.8.9
 
@@ -64,3 +64,4 @@ function connect() {
 
 process.on('uncaughtException', () => { cleanup(); setTimeout(connect, 100); });
 connect();
+
